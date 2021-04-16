@@ -1,0 +1,42 @@
+.r
+
+.thirdbeach{
+    position: absolute;
+    z-index: 0;
+}
+.secondbeach{
+    position: absolute;
+    z-index: 1;
+}
+.firstbeach{
+    position: absolute;
+    z-index: 2;
+}
+
+
+
+
+
+/* Part 1 - Advertisemnt for Piha Beach using CSS only.*/
+
+.firstbeach{
+    animation: fade-out 3s  2s  ;
+
+}
+
+.secondbeach{
+    animation:  bottom-to-top 6s 4s forwards linear;
+}
+.thirdbeach{ 
+    animation: right-to-left 3s 2s forwards linear;
+
+}
+@keyframes fade-out {
+    100% { opacity: 0; }
+  }
+
+    
+
+/*part*/
+
+
