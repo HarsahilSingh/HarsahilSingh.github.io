@@ -16,7 +16,6 @@
 
 
 
-
 /* Part 1 - Advertisemnt for Piha Beach using CSS only.*/
 
 .firstbeach{
@@ -25,18 +24,47 @@
 }
 
 .secondbeach{
-    animation:  bottom-to-top 6s 4s forwards linear;
+    animation:  bottom-to-top 2s 1s forwards linear;
+    
 }
 .thirdbeach{ 
     animation: right-to-left 3s 2s forwards linear;
 
 }
+#centered{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: yellow;
+    font-size: 50px;
+}
+#bottom-right{
+    position:absolute;
+    bottom:8px;
+    right:16px;
+    color: rgb(14, 241, 101);
+    font-style: italic;
+    font-size: 30px;
+}
 @keyframes fade-out {
     100% { opacity: 0; }
   }
 
-    
+@keyframes bottom-to-top{
 
+}
+    
+@keyframes right-to-left {
+   
+}
 /*part*/
 
 
+.girl{height:400px;
+    position: relative;
+   
+}
+.ship{height: 400px;
+    position: relative;
+}
