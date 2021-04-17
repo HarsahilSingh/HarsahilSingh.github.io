@@ -1,36 +1,121 @@
-.r
-
-.thirdbeach{
-    position: absolute;
-    z-index: 0;
-}
-.secondbeach{
-    position: absolute;
-    z-index: 1;
-}
-.firstbeach{
-    position: absolute;
-    z-index: 2;
-}
-
-
-
-
 /* Part 1 - Advertisemnt for Piha Beach using CSS only.*/
-
-.firstbeach{
-    animation: fade-out 3s  2s  ;
-
+img {
+    max-width: 100%;
+    width: 100%;
+    height:auto;
 }
 
-.secondbeach{
-    animation:  bottom-to-top 2s 1s forwards linear;
-    
+h1 {
+	color:#ffc107;
 }
-.thirdbeach{ 
-    animation: right-to-left 3s 2s forwards linear;
+h2 {
+	color:#ffc107;
+}
+.hide {
+	display:none;
+}
+.site-name {
+	left:50px;
+	top:150px;
+	z-index:2;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	text-align: center;
+}
+.name {
+	right:50px;
+	bottom:20px;
+	z-index:2;
+}
 
+
+.site-name h1:before {   
+ content:"Piha";
+    font-size: 600%;
+    animation-name: head;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
 }
+.name h2 {  
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
+	  transform: translate3d(0, 0, 0);
+	  backface-visibility: hidden;
+	  perspective: 1000px;
+ 	
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+@keyframes head {
+    0% {font-size:600%; opacity:1;}
+    25% {font-size:570%; opacity:0;}
+    50% {font-size:600%; opacity:1;}
+    65% {font-size:570%; opacity:0;}
+    80% {font-size:600%; opacity:1; content: "Changed Text"}
+    90% {font-size:570%; opacity:0;}
+    100% {font-size:600%;opacity:1; content: "Original Text"}
+}
+
+
+.beach a {
+	width:100%;
+	height:100%;
+}
+
+.piha-slides {width:100%; height:300px; overflow:hidden; position:relative; }
+.piha-slides img {
+	width: 100%; 
+	height: 100%;
+	position:absolute; 
+	z-index:1;
+}
+
+.piha-slides img.fade{
+	
+	animation:piha-minislide 20s forwards; 
+	opacity:0;
+	
+}
+.piha-slides img.slide-right-left { 
+		
+	transform: translateX(100%);
+	animation: right-left 7s 10s forwards;
+  
+ }
+.piha-slides img.slide-bottom-top{ 
+		
+	 transform: translateY(100%);
+	animation: slide-bottom 4s 6s forwards;
+  
+ }
+ 
+ 
+ 
+@keyframes piha-minislide {25%{opacity:1;} 40%{opacity:0;}}
+
+
+@-webkit-keyframes slide-bottom {
+     100% { transform: translateY(0); } 0% {transform: translateY(100%);}
+}
+@-webkit-keyframes right-left {
+     100% { transform: translateX(0); } 0% {transform: translateX(100%);}
+}
+
 #centered{
     position: absolute;
     top: 50%;
@@ -72,7 +157,6 @@
     top: 8px;
     
 
-    z-index: 1;
     
 
 }
@@ -143,3 +227,77 @@
     top:40px;
 }
 
+
+
+
+
+
+.navbar-nav .navbar  {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	padding:0;
+}
+.navbar-nav .navbar-expand-sm .navbar-nav .nav-link {
+	text-transform:uppercase;
+	line-height: 58px;
+	padding: 0 20px;
+	color:#000;
+}
+.navbar-nav .navbar-expand-sm .navbar-nav .nav-link:hover {
+	background:#000;
+	color:#fff;
+}
+
+
+.flexslider .slides img {
+    height: auto;
+    -moz-user-select: none;
+}
+.flexslider .slides img {
+    width: 100%;
+    display: block;
+}
+.flexslider {
+	position:relative;
+}
+.slide-text {
+	position:absolute;
+}
+
+
+.slides li {
+	position:relative;
+	z-index:1;
+}
+.flex-active-slide .flexslider-text {
+	display:block;
+	
+}
+.flexslider-text {
+	position:absolute;
+	left:20px;
+	top:40px;
+	z-index:2;
+	display:none;
+
+}
+.flexslider-text .text-wrapper {
+ animation: 3s linear 0s move;
+}
+.flexslider-text .text-wrapper-2 {
+ animation: 5s linear 0s move;
+}
+
+@keyframes move {
+  0%,
+  25% {
+    transform: translateX(-200%);
+    left: 200%;
+  }
+  75%,
+  100% {
+    transform: translateX(0%);
+    left: 0%;
+  }
+}
