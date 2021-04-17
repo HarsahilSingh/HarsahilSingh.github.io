@@ -60,11 +60,86 @@
 }
 /*part*/
 
+.advertisement{height: 500px;
+    position: relative;
+    right:0px;
+    top: 8px;
+    left:0px;
+}
+.girl{position:absolute;
+    height:500px;
+    right:0px;
+    top: 8px;
+    
 
-.girl{height:400px;
-    position: relative;
-   
+    z-index: 1;
+    
+
 }
-.ship{height: 400px;
-    position: relative;
+.ship{height: 500px;
+    position: absolute;
+    right:0px ;
+    top: 8px;
 }
+/*Part3*/
+.partthree{
+    background-color:rgb(223, 238, 236);
+    position: absolute;
+    right:0px;
+    left:0px;
+}
+#display{ position:relative;
+    left:0px;
+    font-size: 50px;
+    
+    font-style:italic;
+    color:red;
+    
+}
+
+
+
+#date1{
+    position: relative;
+    top:50px;
+    left: 0px;
+}
+
+#date2{
+    position: relative;
+    top:70px;
+    left: 0px;
+}
+
+#name1{
+    position: absolute;
+    left:600px;
+    top: 115px;
+}
+
+#name2{
+    position:absolute;
+    left:600px;
+    top:170px;
+}
+
+#email1{
+    position: absolute;
+    left:600px;
+    top:225px;
+}
+
+#progressbar{
+    height: 300px;
+    position: relative;
+    
+}
+
+#file{
+    position: relative;
+    height: 40px;
+    width:800px;
+    left:230px;
+    top:40px;
+}
+
