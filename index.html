@@ -126,8 +126,8 @@
 					</div>
 
 					<div class="col-sm-4">
-						<p>Price range:$<span id="demo"></span></p><br>
-            <input type="range" min="100" max="1000" value="500" class="slider" id="myRange" width="">
+						<p>Select Price Range($100-$1000)</p><br>
+            <input type="range" min="100" max="1000" value="0" class="slider" id="myRange" >
               
 					</div>
 				</div>
@@ -143,8 +143,7 @@
               <p>First Name: <span id = "firstNameData"></span></p>
               <p>Last Name: <span id = "lastNameData"></span></p>
               <p>E-mail: <span id="emailData"></span></p>
-              <p>Number Of Adults: <span id="numAdultsData"></span></p>
-              <p>Number of Children: <span id="numChildrenData"></span></p>
+              
 
               
 						  
@@ -153,10 +152,9 @@
 					</div>
 
 					<div class="col-sm-4">
-						<p>Do you need cooking facilities?</p><br>
-            <p>Do you agree with the local native conservation agreement? </p><br>
-            <p> Equipments selected:</p><br>
-            <p>Price:</p>
+						<p>Number Of Adults: <span id="numAdultsData"></span></p>
+            <p>Number of Children: <span id="numChildrenData"></span></p>
+            <p>Price:$<span id="demo"></span></p>
 					</div>
 				</div>
 			</div>
@@ -187,7 +185,7 @@
 						<h1 id="shiptext">EVERY<br>
                 JOURNEY<br>
                 HAS A<br>
-                Story.</h1><br><br><br><br><br><br><br><br><br><br><br><br>
+                STORY.</h1><br><br><br><br><br><br><br><br><br><br><br><br>
             <h2 id="shiptext2">BOOK YOURS</h2>
 						</div>
 						</div>
@@ -209,11 +207,12 @@
 
  <div class= "row" >
  <div class="col-sm-6 align-left">
- <button type = "button" id="previousButton" data-val="0" class="btn btn-primary">Previous</button>
+ <button type = "button" id="previousButton" data-val="1" class="btn btn-primary">Previous</button>
  </div>
   <div class="col-sm-6 align-right">
  <button type = "button" id="nextButton" data-val="1"  class="btn btn-primary">Next</button>
- <button type ="submit" id ="submitButton" class="btn-dark".addClass >CONFIRM YOUR BOOKING</button>
+ <button type = "submit" id="submitButton" data-val="1" class="btn btn-success".addClass hide>Book Now!!</button>
+
  </div>
  </div>
 
@@ -237,30 +236,27 @@
      $( function() {
        
   
-  
-  
- 
- 
+      
+      
 	//NEXT BUTTON
   	$( "#nextButton" ).click(function() {
   var num = $( this ).attr("data-val"); 
-  // alert (num);
+  
   var numInt = parseInt(num);
 
   $("#step"+numInt).addClass("hide");
 	
+  
   if (numInt==3){
-	$( "#nextButton" ).addClass("hide");
-  $("#submitButton").removeClass("hide");
-	
-  }else{
-  	$( "#nextButton" ).removeClass("hide");
-    $("#submitButton").addClass("hide")
-  }
-   if (numInt != 0){
-    $( "#previousButton" ).removeClass("hide");
-  	
-}
+			$( "#nextButton" ).addClass("hide");
+		  $("#submitButton").removeClass("hide");
+			
+		  }else{
+			$( "#nextButton" ).removeClass("hide");
+			$("#submitButton").addClass("hide")
+		  }
+		   
+		
    
 
 
@@ -276,32 +272,60 @@
     $("#file").val(100);
     default: }
 
+  //Summary Page (Show All Values)
+    var checkin = $("#checkin").val();
+	$("#checkinData").html(checkin);
   
- 
+  var checkout =$("#checkout").val();
+  $("#checkoutData").html(checkout);
+
+ var firstName =$("#firstName").val();
+  $("#firstNameData").html(firstName);
+
+  var lastName =$("#lastName").val();
+  $("#lastNameData").html(lastName);
+
+   var email = $("#email").val();
+  $("#emailData").html(email);
+
+  var numAdults = $("#numAdults").val()
+  $("#numAdultsData").html(numAdults);
+
+  var numChildren =$("#numChildren").val()
+  $("#numChildrenData").html(numChildren);
+
+  
+    
+  var numChildren =$("#numChildren").val()
+  $("#numChildrenData").html(numChildren);
+    
+  var numChildren =$("#numChildren").val()
+  $("#numChildrenData").html(numChildren);
+    
+    
    
-   
-		//show all values
+	
     if (numInt==4){
 	var checkin = $("#checkin").val();
 	$("#checkinData").html(checkin);
   
   var checkout =$("#checkout").val();
-  $("#checkoutData").html(checkin);
+  $("#checkoutData").html(checkout);
 
  var firstName =$("#firstName").val();
-  $("firstNameData").html(firstName);
+  $("#firstNameData").html(firstName);
 
   var lastName =$("#lastName").val();
-  $("lastNameData").html(lastName);
+  $("#lastNameData").html(lastName);
 
   var email = $("#email").val();
-  $("emailData").html(email);
+  $("#emailData").html(email);
 
   var numAdults = $("#numAdults").val()
-  $("numAdultsData").html(numAdults);
+  $("#numAdultsData").html(numAdults);
 
   var numChildren =$("#numChildren").val()
-  $("numChildren").html(numChildren);
+  $("#numChildren").html(numChildren);
 
 
    
@@ -309,25 +333,20 @@
 		return false;
    }
    
-   
-    
-  numInt = numInt+1;
+   numInt = numInt+1;
   $("#step"+numInt).removeClass("hide");
   
   $( "#previousButton" ).attr("data-val", num);
   $( "#nextButton" ).attr("data-val", numInt);
+ 
+    
+   
 });
 
 
 //prev
 
-$( "#preButton" ).click(function() {
-  var num = $( this ).attr("data-val"); 
-  // alert (num);
-  var numInt = parseInt(num);
-  
- 
-})  
+
 
   });
   
