@@ -1,442 +1,194 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>assignment</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="slider/flexslider.css" />
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <title>Mermaids Piha Lodges | Home</title>
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row beach">
-      <a href="http://www.piha.co.nz/" target="_blank">
-        <div class="piha-slides">
-          <div class="site-name slide-text">
-            <h1></h1>
-          </div>
-          <div class="name slide-text">
-            <h2>
-              Harsahil Singh <br />
-              (1531054)
-            </h2>
-          </div>
-          <img src="beach 1.jpg" alt="Slide 1" class="fade" />
-          <img src="beach 2.jpg" alt="Slide 2" class="slide-bottom-top" />
-          <img src="beach 3.jpg" alt="Slide 3" class="slide-right-left" />
+    <header class="header">
+        <div class="header__img">
+            <img src="images/header.jpg" alt="header" class="img-fluid">
         </div>
-      </a>
-    </div>
-
-    <div class="row navbar-nav">
-      <nav class="navbar navbar-expand-sm bg-warning">
-        <!-- Links -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="storyboard part 1 .pdf">Storyboard 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Storyboard Part 2.pdf">Storyboard 2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Layout for Part 3.pdf">Wireframe 3</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-8">
-        <div id="step1">
-          <h1 id="display" style="text-align: center">
-            Welcome to Piha Lodges
-          </h1>
-          <h2 id="display2" style="color: rgb(44, 1, 161); text-align: center">
-            Book your stay now!!!
-          </h2>
-          <div class="row" style="padding: 40px">
-            <div class="col-sm-4">
-              <div id="firstpage">
-                <p>
-                  Check in :<input type="date" id="checkin" class="form-control datepicker" />
-                </p>
-                <p>
-                  Check out :<input type="date" id="checkout" class="form-control datepicker" />
-                </p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <p>
-                First name<input type="text" id="firstName" class="form-control" />
-              </p>
-              <p>
-                Last name<input type="text" id="lastName" class="form-control" />
-              </p>
-              <p>
-                E-mail<input type="E-mail" id="email" class="form-control" />
-              </p>
-              <br />
-            </div>
-          </div>
-        </div>
-        <div id="step2" class="hide">
-          <h1 id="display" style="text-align: center">
-            Welcome to Piha Lodges
-          </h1>
-          <h2 id="display2" style="color: rgb(44, 1, 161); text-align: center">
-            Book your stay now!!!
-          </h2>
-          <div class="row" style="padding: 40px">
-            <div class="col-sm-4">
-              <div id="secondpage">
-                <p>
-                  Number of Adults:<input type="number" id="numAdults" min="0" class="form-control numAdultsa" />
-                </p>
-                <p>
-                  Number of Children :<input type="number" id="numChildren" min="0" class="form-control numChildrena" />
-                </p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <p>Do you need cooking facilities?</p>
-              <br />
-              <input type="radio" id="yes" name="cooking" value="yes" />
-              <label for="yes">Yes</label>
-              <input type="radio" id="no" name="cooking" value="no" />
-              <label for="no">No</label><br /><br /><br />
-              <label for="conservation">Do you agree with the local native conservation
-                agreement?</label>
-              <select name="conservation" id="conservation">
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div id="step3" class="hide">
-          <h1 id="display" style="text-align: center">
-            Welcome to Piha Lodges
-          </h1>
-          <h2 id="display2" style="color: rgb(44, 1, 161); text-align: center">
-            Book your stay now!!!
-          </h2>
-          <div class="row" style="padding: 40px">
-            <div class="col-sm-4">
-              <div id="thirdpage">
-                <p>
-                  Select the equipments you may need:<br /><input type="checkbox" id="equipments" name="equipments"
-                    value="swimmingSuit" />
-                  <label for="swimmingSuit"> Swimming Suit</label>
-                  <input type="color" id="favcolor" name="favcolor" value="#ff0000" /><br />
-                  <input type="checkbox" id="equipments1" name="equipments1" value="swimmingGoggles" />
-                  <label for="swimmingGoggles"> Swimming Goggles</label>
-                  <input type="color" id="favcolor" name="favcolor" value="#ff0000" /><br />
-                  <input type="checkbox" id="equipments2" name="equipments2" value="surfboard" />
-                  <label for="surfboard"> Surfboard</label>
-                  <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
-                </p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <p>Select Price Range($100-$1000)</p>
-              <br />
-              <input type="range" min="100" max="1000" value="0" class="slider" id="myRange" />
-            </div>
-          </div>
-        </div>
-        <div id="step4" class="hide">
-          <h1 id="dispaly3" style="text-align: center; color: black">
-            Confirm your booking details
-          </h1>
-          <div class="row" style="padding: 40px">
-            <div class="col-sm-4">
-              <div id="fourthpage">
-                <p>check in Date: <span id="checkinData"></span></p>
-                <p>Check out Date:<span id="checkoutData"></span></p>
-                <p>First Name: <span id="firstNameData"></span></p>
-                <p>Last Name: <span id="lastNameData"></span></p>
-                <p>E-mail: <span id="emailData"></span></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <p>Number Of Adults: <span id="numAdultsData"></span></p>
-              <p>Number of Children: <span id="numChildrenData"></span></p>
-              <p>Price:$<span id="demo"></span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="advertisement">
-          <a href="https://booking.interislander.co.nz" target="_blank">
-            <div class="flexslider">
-              <ul class="slides">
-                <li>
-                  <div class="flexslider-text">
-                    <div class="text-wrapper">
-                      <h1 id="girl1">HOMEWARD BOUND?</h1>
-                      <h2 id="girl2">
-                        ARTISTIC <br />
-                        ODESSEY?
-                      </h2>
-                      <h3 id="girl3">
-                        VINEYARD<br />
-                        VOYAGE?
-                      </h3>
-                    </div>
-                  </div>
-                  <img src="lady.jpg" />
+        <nav class="navbar navbar-expand-sm bg-dark justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Book Mermaids Lodge</a>
                 </li>
-                <li>
-                  <img src="cruise.jpg" />
-                  <div class="flexslider-text">
-                    <div class="text-wrapper-2">
-                      <h1 id="shiptext">
-                        EVERY<br />
-                        JOURNEY<br />
-                        HAS A<br />
-                        STORY.
-                      </h1>
-                      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                      <h2 id="shiptext2">BOOK YOURS</h2>
-                    </div>
-                  </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/game.html">Play Game</a>
                 </li>
-              </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="./docs/Landing_Page_Wireframe.pdf" target="_blank">Documentation
+                        Landing-Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./docs/Booking_System_Wireframe.pdf" target="_blank">Documentation
+                        Booking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="_blank">Documentation Game</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id ="main">
+        <div class="row">
+            <div class="col">
+                <img src="images/side-left.png" class="left-img img-fluid" alt="side-img-left">
             </div>
-          </a>
+
+            <div class="col-7 content">
+                <h1 class="display-6" id ="heading">Welcome to Mermaids Piha Lodges</h1>
+                <div class="row">
+                    <div class="col-2 ">
+                        <p>Name</p>
+                        <input type="text" id="name">
+                    </div>
+
+                    <div class="col-6">
+                        <p>Number of people</p>
+                        <input type="number" id="numPeople" min="1" max="8">
+                    </div>
+
+                    <div class="col-2 ">
+                        <p>Check in</p>
+                        <input type="date" id="checkIn">
+                    </div>
+                    <div class="col-5">
+                        <p>Check out</p>
+                        <input type="date" id="checkOut">
+                    </div>
+                    <p id="demo"></p>
+
+                </div>
+                <div class="row">
+                    <div class="col-2" id="btn">
+                        <button class="searchBtn" onclick="Availability()">Search</button>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-1" id="instructions" style = "display: inline-block">
+                        <strong>
+                            Steps for booking
+                        </strong>
+                        <li>Enter your name and number of people</li>
+                        <li>Set the Check-in and Check-out Date</li>
+                        <li>Hover over the Availaible lodges to see the details</li>
+                        <li>Click on the lodge to view the booking details </li>
+                        <li>confirm your booking</li>
+
+                    </div>
+                    <div class="col-1" id="roombooking" style="display:none ">
+                        <h3>INFORMATION FOR YOUR STAY</h3>
+                        
+
+                        <p id="sLodge"> Lodge Number :</p>
+                        <p id="sNumber">Number of People :</p>
+                        <p id="sCheckIn">Check-in-date :</p>
+                        <p id="sCheckOut">Check-out-Date :</p>
+                        <p id="sCost">Cost per day : $</p>
+                        <p id="sNumberDays">Number of Days :</p>
+                        <p id="sPrice">Total Amount : $</p>
+                        <button onclick="final()" class="btnstyle" id="btnconfirm">Confirm your booking </button>
+
+                    </div>
+
+                    <div class="col-1" id="roombooking1" style="display: none">
+                        <h2> Your Booking  Details!!!</h2>
+                        <strong>Booking has been confirmed </strong>
+                        <br><br>
+                        <p id="sName1"> Name :</p>
+                        <p id="sLodge1"></p>
+                        <p id="sNumber1">Number of People :</p>
+                        <p id="sCheckIn1">Check-in-date :</p>
+                        <p id="sCheckOut1">Check-out-Date :</p>
+                        <p id="sCost1"></p>
+                        <p id="sNumberDays1">Number of Days :</p>
+                        <p id="sPrice1"></p>
+
+                        <button onclick="anotherBooking()" class="btnstyle" id="btnconfirm">Make Another Booking </button>
+
+                    </div>
+
+
+
+
+                    <div class="col-2">
+
+
+                        <canvas style="background-image: url('images/lodge\ map.jpg');" id="myCanvas" width="400"
+                            height="410"></canvas>
+
+                        <div id="lodgesBtn">
+                            <button class="btn btn-lg btn-primary" class="lodge" id="lodge1"
+                                onclick="summary(this.id)" disabled>Lodge 1</button>
+                            <button class="btn btn-lg btn-primary" class="lodge" id="lodge2"
+                                onclick="summary(this.id)">Lodge 2</button>
+                            <button class="btn btn-lg btn-primary" class="lodge" id="lodge3"
+                                onclick="summary(this.id)">Lodge 3</button>
+                            <button class="btn btn-lg btn-primary" class="lodge" id="lodge4"
+                                onclick="summary(this.id)">Lodge 4</button>
+                            <button class="btn btn-lg btn-primary" class="lodge" id="lodge5"
+                                onclick="summary(this.id)" disabled>Lodge 5</button>
+                            <button class="btn btn-lg btn-primary" class="lodge" id="lodge6" 
+                            onclick="summary(this.id)">Lodge6</button>
+                            <button class="btn btn-lg btn-primary" class="lodge" id="lodge7"
+                             onclick="summary(this.id)" disabled>Lodge7 </button>
+                            <button class="btn btn-lg btn-primary" class="lodge" id="lodge8"
+                             onclick="summary(this.id)">Lodge8</button>
+                            <button class="btn btn-lg btn-primary" class="lodge" id="lodge9" 
+                            onclick="summary(this.id)">Lodge9</button>
+                            <button class="btn btn-lg btn-primary" class="lodge" id="lodge10"
+                            onclick="summary(this.id)">Lodge 10</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/side-right.png" class="right-img img-fluid" alt="side-img-right">
+            </div>
         </div>
-      </div>
-    </div>
-
-    <div id="progressbar">
-      <progress id="file" value="25" max="100">25%</progress>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6 align-left">
-        <button type="button" id="previousButton" data-val="1" class="btn btn-primary">
-          Previous
-        </button>
-      </div>
-      <div class="col-sm-6 align-right">
-        <button type="button" id="nextButton" data-val="1" class="btn btn-primary">
-          Next
-        </button>
-        <button type="submit" id="submitButton" class="btn btn-success">BOOK NOW!!!</button>
-      </div>
-    </div>
-  </div>
-  <!-- jQuery library -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
-
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <script src="slider/jquery.flexslider-min.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      $("#submitButton").addClass("hide")
-      //NEXT BUTTON
-      $("#nextButton").click(function () {
-        var num = $(this).attr("data-val");
-
-        var numInt = parseInt(num);
-
-        $("#step" + numInt).addClass("hide");
-
-        //Progress Bar (Using Switch Statement)
-        switch (numInt) {
-          case 1:
-            $("#file").val(50);
-            break;
-          case 2:
-            $("#file").val(75);
-            break;
-          case 3:
-            $("#file").val(100);
-          default:
-        }
-
-        //Summary Page (Show All Values)
-        var checkin = $("#checkin").val();
-        $("#checkinData").html(checkin);
-
-        var checkout = $("#checkout").val();
-        $("#checkoutData").html(checkout);
-
-        var firstName = $("#firstName").val();
-        $("#firstNameData").html(firstName);
-
-        var lastName = $("#lastName").val();
-        $("#lastNameData").html(lastName);
-
-        var email = $("#email").val();
-        $("#emailData").html(email);
-
-        var numAdults = $("#numAdults").val();
-        $("#numAdultsData").html(numAdults);
-
-        var numChildren = $("#numChildren").val();
-        $("#numChildrenData").html(numChildren);
-
-        var numChildren = $("#numChildren").val();
-        $("#numChildrenData").html(numChildren);
-
-        var numChildren = $("#numChildren").val();
-        $("#numChildrenData").html(numChildren);
-
-        
-
-
-        if (numInt == 4) {
-          var checkin = $("#checkin").val();
-          $("#checkinData").html(checkin);
-
-          var checkout = $("#checkout").val();
-          $("#checkoutData").html(checkout);
-
-          var firstName = $("#firstName").val();
-          $("#firstNameData").html(firstName);
-
-          var lastName = $("#lastName").val();
-          $("#lastNameData").html(lastName);
-
-          var email = $("#email").val();
-          $("#emailData").html(email);
-
-          var numAdults = $("#numAdults").val();
-          $("#numAdultsData").html(numAdults);
-
-          var numChildren = $("#numChildren").val();
-          $("#numChildren").html(numChildren);
-
-          var slider = document.getElementById("myRange");
-          var output = document.getElementById("demo");
-          output.innerHTML = slider.value;
-
-          slider.oninput = function () {
-          output.innerHTML = this.value;
-          }
-
-          return false;
-        }
-
-        numInt = numInt + 1;
-        if (numInt == 1) {
-          $("#previousButton").addClass("hide");
-        } else {
-          $("#previousButton").removeClass("hide");
-        }
-
-        if (numInt == 4) {
-          $("#nextButton").addClass("hide");
-          $("#submitButton").removeClass("hide")
-        } else {
-          $("#nextButton").removeClass("hide");
-          $("#submitButton").addClass("hide")
-        }
-
-
-        $("#step" + numInt).removeClass("hide");
-
-        $("#previousButton").attr("data-val", numInt);
-        $("#nextButton").attr("data-val", numInt);
-      });
-
-      //previous
-      $("#previousButton").click(function () {
-        var num = $(this).attr("data-val");
-
-        var numInt = parseInt(num);
 
 
 
-        $("#step" + numInt).addClass("hide");
-
-        if (numInt == 2) {
-          $("#previousButton").addClass("hide");
-        } else {
-          $("#previousButton").removeClass("hide");
-        }
-
-        numInt = numInt - 1;
-
-        if (numInt == 1) {
-          $("#previousButton").addClass("hide");
-        } else {
-          $("#previousButton").removeClass("hide");
-        }
-
-        if (numInt == 4) {
-          $("#nextButton").addClass("hide");
-          $("#submitButton").removeClass("hide")
-        } else {
-          $("#nextButton").removeClass("hide");
-          $("#submitButton").addClass("hide")
-        }
-
-        //Progress Bar (Using Switch Statement)
-        switch (numInt) {
-          case 1:
-            $("#file").val(25);
-            break;
-          case 2:
-            $("#file").val(50);
-            break;
-          case 3:
-            $("#file").val(75);
-          default:
-        }
 
 
-        $("#step" + numInt).removeClass("hide");
 
-        $("#previousButton").attr("data-val", numInt);
-        $("#nextButton").attr("data-val", numInt);
-      });
-    });
 
-    //animation
-    $(window).load(function () {
-      $(".flexslider").flexslider({
-        animation: "slide",
-        controlsContainer: ".slider-container",
-        controlNav: false,
-        directionNav: true,
-        slideshowSpeed: 5000,
-        animationDuration: 1000,
-        pauseOnAction: true,
-        pauseOnHover: true,
-        animationLoop: true,
-        slideshow: true,
-        touch: true,
-      });
-    });
 
-    //Price range
 
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
 
-    slider.oninput = function () {
-      output.innerHTML = this.value;
-    };
-  </script>
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Local Script -->
+    <script src="scripts/global.js"></script>
 </body>
 
 </html>
